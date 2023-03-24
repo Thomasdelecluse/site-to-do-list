@@ -1,18 +1,31 @@
-.formulaire{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 50%;
-    height: 50%;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  background-color: #efefef;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.fond{
+.formulaire{
+  display: flex;
+  flex-direction: column;
+}
+.header{
+margin-top: 40px;
+}
+.fond {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: aqua;
+  background-color: #ffffff;
+}
+.submit{
+  display: flex;
+  flex-direction: row;
+ justify-content: space-between;
 }
