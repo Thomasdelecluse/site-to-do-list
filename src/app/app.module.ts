@@ -9,11 +9,16 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import {RouterLink, RouterModule} from "@angular/router";
+import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodolistComponent
+    TodolistComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +27,11 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     MatSelectModule,
     MatButtonModule,
     MatInputModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    RouterLink,
+    RouterModule,
+    AppRoutingModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
