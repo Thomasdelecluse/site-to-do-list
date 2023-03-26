@@ -1,0 +1,44 @@
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/img/tablefond.jpg");
+}
+.home-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1800px;
+  height: 800px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #e0e0e0;
+
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #624632;
+  width: 100%;
+}
+.buttons{
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+h2{
+  color: #d9d9d9;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.mat-brown {
+  background-color: #a6846e;
+  color: #fff;
+}
