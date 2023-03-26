@@ -1,6 +1,8 @@
 <div class="fond">
 <div class="card" >
-  <h2 class="header">Ajouter une ToDo </h2>
+  <div class="header">
+    <h2 class="title">Ajouter une ToDo </h2>
+  </div>
   <form class="formulaire" action="">
     <mat-form-field class="example-full-width">
       <mat-label>Titre</mat-label>
@@ -18,8 +20,8 @@
       <input matInput placeholder="Exemple: aller courir 15 kilometres ">
     </mat-form-field>
     <div class="submit">
-      <button mat-raised-button color="warn">Annuler</button>
-      <button type="submit" mat-raised-button color="primary">Ajouter</button>
+      <button routerLink="/home" mat-raised-button color="warn">Annuler</button>
+      <button type="submit" mat-raised-button color="success">Ajouter</button>
     </div>
   </form>
 </div>
