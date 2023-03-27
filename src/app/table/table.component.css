@@ -1,0 +1,19 @@
+table{
+  width: 100%;
+}
+.button-status {
+  border: 2px solid;
+  transition: all 0.3s ease;
+  width: 91px;
+  height: 36px;
+}
+
+.button-status.ok {
+  border-color: #18b90a;
+  color: #18b90a;
+}
+
+.button-status.not-ok {
+  border-color: #ff1a1a;
+  color: #ff1a1a;
+}
