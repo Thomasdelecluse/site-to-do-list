@@ -3,21 +3,21 @@
   <div class="header">
     <h2 class="title">Ajouter une ToDo </h2>
   </div>
-  <form class="formulaire" action="">
-    <mat-form-field class="example-full-width">
+  <form class="formulaire" [formGroup]="todoListForm" (ngSubmit)="onFormSubmit()">
+    <mat-form-field class="example-full-width" >
       <mat-label>Titre</mat-label>
-      <input matInput placeholder="Exemple: aller courir">
+      <input matInput formControlName="title" placeholder="Exemple: aller courir">
     </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Type de tache</mat-label>
-      <mat-select>
-        <mat-option value="one">Tache</mat-option>
-        <mat-option value="two">Action</mat-option>
+    <mat-form-field appearance="fill" >
+      <mat-label>Type de tache </mat-label>
+      <mat-select formControlName="type">
+        <mat-option value="Tache">Tache</mat-option>
+        <mat-option value="Action">Action</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width" >
       <mat-label>Description</mat-label>
-      <input matInput placeholder="Exemple: aller courir 15 kilometres ">
+      <input matInput formControlName="description" placeholder="Exemple: aller courir 15 kilometres ">
     </mat-form-field>
     <div class="submit">
       <button routerLink="/home" mat-raised-button color="warn">Annuler</button>
