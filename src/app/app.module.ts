@@ -13,26 +13,32 @@ import {RouterLink, RouterModule} from "@angular/router";
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {MatTableModule} from "@angular/material/table";
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodolistComponent,
-    HomeComponent
+    HomeComponent,
+    TableComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatOptionModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatInputModule,
-    MatDatepickerModule,
-    RouterLink,
-    RouterModule,
-    AppRoutingModule,
-    MatTableModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatOptionModule,
+        MatSelectModule,
+        MatButtonModule,
+        MatInputModule,
+        MatDatepickerModule,
+        RouterLink,
+        RouterModule,
+        AppRoutingModule,
+        MatTableModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
