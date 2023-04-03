@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./home/home.component";
-import {TodolistComponent} from "./todolist/todolist.component";
+import {FormtodoComponent} from "./form/formtodo.component";
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, },
-  { path: 'todolist', component: TodolistComponent, },
+  { path: 'form', component: FormtodoComponent, },
 ];
 
 @NgModule({

@@ -1,16 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {ToDoListFormService} from "../../service/ToDoListFormService";
-import {HttpClient} from "@angular/common/http";
 import {ToDoListDAO} from "../../dao/ToDoListDAO";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-todolist',
-  templateUrl: './todolist.component.html',
-  styleUrls: ['./todolist.component.css']
+  selector: 'app-form',
+  templateUrl: './formtodo.component.html',
+  styleUrls: ['./formtodo.component.css']
 })
-export class TodolistComponent implements OnInit {
+export class FormtodoComponent implements OnInit {
 
 
   constructor(public todoListController: ToDoListDAO, private router: Router) {
