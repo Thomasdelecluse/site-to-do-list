@@ -6,24 +6,45 @@
   <form class="formulaire" [formGroup]="todoListForm" (ngSubmit)="onFormSubmit()">
     <mat-form-field class="example-full-width" >
       <mat-label>Titre</mat-label>
-      <input matInput formControlName="title" placeholder="Exemple: aller courir">
+      <input required minlength="4" matInput formControlName="title" placeholder="Exemple: aller courir">
+      <div *ngIf="todoListForm.controls.title.invalid && (todoListForm.controls.title.dirty || todoListForm.controls.title.touched)"
+           class="alert">
+        <div class="error" *ngIf="todoListForm.controls.title.errors?.['required']">
+          Le titre est obligatoire.
+        </div>
+        <div class="error" *ngIf="todoListForm.controls.title.errors?.['minlength']">
+          Minimun 4 charactères.
+        </div>
+      </div>
     </mat-form-field>
     <mat-form-field appearance="fill" >
       <mat-label>Type de tache </mat-label>
-      <mat-select formControlName="type">
+      <mat-select required formControlName="type">
         <mat-option value="Tache">Tache</mat-option>
         <mat-option value="Action">Action</mat-option>
         <mat-option value="Evenement">Événements</mat-option>
         <mat-option value="Projet">Projets</mat-option>
       </mat-select>
+      <div *ngIf="todoListForm.controls.type.invalid && (todoListForm.controls.type.dirty || todoListForm.controls.type.touched)"
+           class="alert">
+        <div class="error" *ngIf="todoListForm.controls.type.errors?.['required']">
+          Selectionner une tache est obligatoire.
+        </div>
+      </div>
     </mat-form-field>
     <mat-form-field class="example-full-width" >
       <mat-label>Description</mat-label>
-      <input matInput formControlName="description" placeholder="Exemple: aller courir 15 kilometres ">
+      <input required matInput formControlName="description" placeholder="Exemple: aller courir 15 kilometres ">
+      <div *ngIf="todoListForm.controls.description.invalid && (todoListForm.controls.description.dirty || todoListForm.controls.description.touched)"
+           class="alert">
+        <div class="error" *ngIf="todoListForm.controls.description.errors?.['required']">
+          La description est obligatoire.
+        </div>
+      </div>
     </mat-form-field>
     <div class="submit">
       <button routerLink="/home" mat-raised-button color="warn">Annuler</button>
-      <button type="submit" mat-raised-button color="success">Ajouter</button>
+      <button type="submit" [disabled]="!todoListForm.valid" mat-raised-button color="success">Ajouter</button>
     </div>
   </form>
 </div>

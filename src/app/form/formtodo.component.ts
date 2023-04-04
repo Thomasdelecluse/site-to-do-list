@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ToDoListDAO} from "../../dao/ToDoListDAO";
 import {Router} from "@angular/router";
 
@@ -15,9 +15,9 @@ export class FormtodoComponent implements OnInit {
   }
 
   todoListForm = new FormGroup({
-    title: new FormControl(''),
-    type: new FormControl(''),
-    description: new FormControl(''),
+    title: new FormControl('', Validators.required),
+    type: new FormControl('',Validators.required),
+    description: new FormControl('',Validators.required),
   })
 
   ngOnInit(): void {
