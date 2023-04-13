@@ -1,0 +1,21 @@
+<div class="fond">
+  <div class="card" >
+    <div class="header">
+      <h2 class="title">Login Page</h2>
+    </div>
+    <form class="formulaire" [formGroup]="LoginForm" (ngSubmit)="onFormSubmit()">
+      <mat-form-field class="example-full-width" >
+        <mat-label>Login</mat-label>
+        <input required minlength="4" matInput formControlName="login" placeholder="Votre nom d'utilisateur">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" >
+        <mat-label>Password</mat-label>
+        <input required minlength="4" matInput formControlName="password" placeholder="Votre mot de passe">
+      </mat-form-field>
+      <div class="submit">
+        <button routerLink="/home" mat-raised-button color="warn">Annuler</button>
+        <button type="submit"  mat-raised-button color="success">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>
