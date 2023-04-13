@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {ToDoListDAO} from "../dao/ToDoListDAO";
-import {ToDoDTO} from "../app/dto/ToDoDTO";
+import {ToDoDTO} from "../dto/ToDoDTO";
 
 @Injectable({
   providedIn: 'root'
