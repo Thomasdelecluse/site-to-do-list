@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {LoginDAO} from "../../dao/LoginDAO";
+import {HttpResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import {LoginDAO} from "../../dao/LoginDAO";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(loginController: LoginDAO, private router: Router) {
+  constructor(private loginController: LoginDAO, private router: Router) {
 
   }
 
@@ -27,11 +28,9 @@ export class LoginComponent implements OnInit {
       login: this.LoginForm.controls['login'].value ?? '',
       password: this.LoginForm.controls['password'].value ?? '',
     }
+    console.log(loginInfo)
 
-    this.loginController.connection(loginInfo).subscribe(() => {
-      // Rediriger vers la page d'accueil après avoir créé le todo
-      this.router.navigate(['/home']);
-    })
+    this.loginController.connection(loginInfo)
 
   }
 
