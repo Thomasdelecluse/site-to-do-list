@@ -33,17 +33,18 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-image: url("/assets/img/login-background.jpg");
+}
+.register{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
 }
 .submit{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
-.mat-success {
-  background-color: green;
+.mat-brown {
+  background-color: #a6846e;
   color: #fff;
-}
-.error{
-  color: red;
 }
