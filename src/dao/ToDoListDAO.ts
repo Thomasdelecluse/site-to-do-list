@@ -2,6 +2,7 @@ import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {ToDoDTO} from "../dto/ToDoDTO";
 import {Observable} from "rxjs";
+import {TokenService} from "../service/TokenService";
 
 
 @Injectable({
@@ -9,22 +10,30 @@ import {Observable} from "rxjs";
 })
 export class ToDoListDAO {
 
-  constructor(private httpClient: HttpClient) {
+  tokenService: TokenService;
+
+  constructor(private httpClient: HttpClient, private TokenService: TokenService) {
+    this.tokenService = TokenService;
   }
 
-  createToDo(todo: { title: string, type: string, description: string }) {
-    return this.httpClient.post('http://localhost:8088/todos', todo)
+// provisoire argument name
+  createToDo(todo: {name: string, title: string, type: string, description: string }) {
+    const headers = this.tokenService.getTokenForHeaders();
+    return this.httpClient.post('http://localhost:8088/todos', todo, {headers})
   }
 
   getAllToDo() : Observable<ToDoDTO[]> {
-    return this.httpClient.get<ToDoDTO[]>('http://localhost:8088/todos')
+    const headers = this.tokenService.getTokenForHeaders();
+    return this.httpClient.get<ToDoDTO[]>('http://localhost:8088/todos', {headers})
   }
 
   putUpdateStatus(id: number, todo: Omit<ToDoDTO, "id">) {
-    return this.httpClient.put('http://localhost:8088/todos/' + id, todo)
+    const headers = this.tokenService.getTokenForHeaders();
+    return this.httpClient.put('http://localhost:8088/todos/' + id, todo, {headers})
   }
 
   deleteTodo(id: number) {
-    return this.httpClient.delete('http://localhost:8088/todos/' + id)
+    const headers = this.tokenService.getTokenForHeaders();
+    return this.httpClient.delete('http://localhost:8088/todos/' + id, {headers})
   }
 }

@@ -9,9 +9,6 @@ export class ToDoListFormService {
 
   constructor(private todoListController: ToDoListDAO) {  }
 
-  public form(todo: {title: string, type: string, description: string}) {
-    this.todoListController.createToDo(todo)
-  }
 
   public updateTableWithDatas() {
     return this.todoListController.getAllToDo()

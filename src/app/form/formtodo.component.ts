@@ -15,6 +15,7 @@ export class FormtodoComponent implements OnInit {
   }
 
   todoListForm = new FormGroup({
+    name: new FormControl('', Validators.required),
     title: new FormControl('', Validators.required),
     type: new FormControl('',Validators.required),
     description: new FormControl('',Validators.required),
@@ -25,6 +26,7 @@ export class FormtodoComponent implements OnInit {
 
   onFormSubmit() {
     const todo = {
+      name: this.todoListForm.controls['name'].value ?? '',
       title: this.todoListForm.controls['title'].value ?? '',
       type: this.todoListForm.controls['type'].value ?? '',
       description: this.todoListForm.controls['description'].value ?? ''
