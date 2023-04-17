@@ -1,0 +1,54 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  border-radius: 10px;
+  background-color: #efefef;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.formulaire{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px 50px 50px;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  background-color: #624632;
+  width: 100%;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.title{
+  color: #d9d9d9;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.fond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/img/login-background.jpg");
+}
+.register{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+.submit{
+  display: flex;
+  flex-direction: column;
+}
+.mat-brown {
+  background-color: #a6846e;
+  color: #fff;
+}
+.alert{
+  display: flex;
+  justify-content: center;
+}

@@ -17,6 +17,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {TableComponent} from './table/table.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     TableComponent,
     LoginComponent,
+    RegisterComponent,
 
   ],
     imports: [

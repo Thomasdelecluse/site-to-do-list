@@ -1,0 +1,28 @@
+<div class="fond">
+  <div class="card" >
+    <div class="header">
+      <h2 class="title">Register Page</h2>
+    </div>
+    <form class="formulaire" [formGroup]="RegisterForm" (ngSubmit)="onFormSubmit()">
+      <mat-form-field class="example-full-width" >
+        <mat-label>Login</mat-label>
+        <input required minlength="4" matInput formControlName="login" placeholder="Votre nom d'utilisateur">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" >
+        <mat-label>Password</mat-label>
+        <input required minlength="4" matInput formControlName="password" placeholder="Votre mot de passe">
+      </mat-form-field>
+<!--          alert mauvais mot de passe-->
+      <div  *ngIf="error != null" class="alert alert-danger" role="alert">
+        <h5 style="color: #ff1a1a; font-weight: bold" >{{error}}</h5>
+      </div>
+      <div class="register">
+        <!--  Crée un compte-->
+        <a routerLink="/login">Page login</a>
+      </div>
+      <div class="submit">
+        <button type="submit"  mat-raised-button  [disabled]="!RegisterForm.valid" color="brown">Crée un compte</button>
+      </div>
+    </form>
+  </div>
+</div>
