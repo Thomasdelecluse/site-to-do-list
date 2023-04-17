@@ -16,4 +16,9 @@ export class AuthDAO {
     const url = `http://localhost:8088/login`;
     return this.httpClient.post<SuccessfulLoginDTO>(url, loginInfo)
   }
+
+  register(registerInfo: { login: string, password: string }) {
+    const url = `http://localhost:8088/utilisateurs`;
+    return this.httpClient.post<string>(url, registerInfo, {observe: 'response'})
+  }
 }

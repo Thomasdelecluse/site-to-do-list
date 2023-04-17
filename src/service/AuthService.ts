@@ -24,4 +24,8 @@ export class AuthService {
     );
   }
 
+  public register(registerInfo: { login: string, password: string }): Observable<any> {
+    return this.authController.register(registerInfo)
+  }
+
 }
