@@ -1,4 +1,11 @@
 <div class="home">
-  <router-outlet></router-outlet>
+  <mat-drawer-container class="drawer-container">
+    <mat-drawer #drawer class="drawer">
+      <app-drawer></app-drawer>
+    </mat-drawer>
+    <mat-drawer-content style="height: 100vh">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>
 
