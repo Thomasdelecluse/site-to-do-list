@@ -4,9 +4,9 @@
       <h2><Strong>To Do List</Strong></h2>
     </div>
     <div class="buttons">
-      <button type="submit"  mat-raised-button color="brown" routerLink="/form">Ajouter une tache</button>
+      <button (click)="toggleDrawer()" mat-raised-button color="brown" class="menu-button" ><mat-icon fontSet="fa"  fontIcon="fa-bars"></mat-icon></button>
+      <button type="submit"  mat-raised-button color="brown" routerLink="/form" style="margin: 20px">Ajouter une tache</button>
     </div>
-
     <div class="table">
     <app-table></app-table>
     </div>

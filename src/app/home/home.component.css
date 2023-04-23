@@ -17,6 +17,11 @@
   background-color: #e0e0e0;
 
 }
+mat-icon{
+  display: flex;
+ justify-content: center;
+  align-items: center;
+}
 .header{
   display: flex;
   justify-content: center;
@@ -26,12 +31,16 @@
   background-color: #624632;
   width: 100%;
 }
+.menu-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
 .buttons{
-  margin-top: 20px;
   display: flex;
   width: 100%;
-  justify-content: flex-end;
-  margin-right: 40px;
+  justify-content: space-between;
 }
 h2{
   color: #d9d9d9;
