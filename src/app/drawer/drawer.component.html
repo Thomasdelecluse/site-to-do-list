@@ -1,0 +1,18 @@
+<div class="drawer-container">
+  <mat-nav-list>
+    <a class="menu-button" routerLink="/home" routerLinkActive="active">
+      <mat-icon fontSet="fa" fontIcon="fa-house-user"></mat-icon>
+      <span class="menu-span">Accueil</span>
+    </a>
+    <a class="menu-button" routerLink="/form" routerLinkActive="active">
+      <mat-icon fontSet="fa" fontIcon="fa-add"></mat-icon>
+      <span class="menu-span">Ajouter une todo</span>
+    </a>
+  </mat-nav-list>
+  <mat-nav-list>
+    <a class="menu-button" (click)="logout()" routerLinkActive="active">
+      <mat-icon fontSet="fa" fontIcon="fa-bars"></mat-icon>
+      <span class="menu-span">Déconnexion</span>
+    </a>
+  </mat-nav-list>
+</div>

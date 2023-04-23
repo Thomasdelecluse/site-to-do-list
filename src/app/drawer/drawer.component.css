@@ -1,0 +1,26 @@
+.drawer-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+mat-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+}
+.menu-button{
+  display: flex;
+  border-radius: 4px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #a6846e;
+  color: white;
+  margin: 10px 0px 10px 0px;
+}
+.menu-span{
+  margin-left: 10px;
+}
