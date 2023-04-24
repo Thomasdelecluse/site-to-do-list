@@ -4,14 +4,15 @@ import {HomeComponent} from "./home/home.component";
 import {FormtodoComponent} from "./form/formtodo.component";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
+import {AuthGuard} from "../config/AuthGuard";
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, },
-  { path: 'form', component: FormtodoComponent, },
-  { path: 'login', component: LoginComponent, },
-  { path: 'register', component: RegisterComponent, },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'form', component: FormtodoComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
 ];
 
 @NgModule({
