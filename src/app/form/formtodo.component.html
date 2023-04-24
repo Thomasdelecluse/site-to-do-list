@@ -5,10 +5,6 @@
   </div>
   <form class="formulaire" [formGroup]="todoListForm" (ngSubmit)="onFormSubmit()">
     <mat-form-field class="example-full-width" >
-      <mat-label>Name</mat-label>
-      <input required minlength="2" matInput formControlName="name" placeholder="Exemple: Admin">
-    </mat-form-field>
-    <mat-form-field class="example-full-width" >
       <mat-label>Titre</mat-label>
       <input required minlength="4" matInput formControlName="title" placeholder="Exemple: aller courir">
       <div *ngIf="todoListForm.controls.title.invalid && (todoListForm.controls.title.dirty || todoListForm.controls.title.touched)"

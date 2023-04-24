@@ -17,7 +17,7 @@ export class ToDoListDAO {
   }
 
 // provisoire argument name
-  createToDo(todo: {name: string, title: string, type: string, description: string }) {
+  createToDo(todo: {title: string, type: string, description: string }) {
     const headers = this.tokenService.getTokenForHeaders();
     return this.httpClient.post('http://localhost:8088/todos', todo, {headers})
   }
