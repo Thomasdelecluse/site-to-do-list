@@ -22,6 +22,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatIconModule} from "@angular/material/icon";
 import { DrawerComponent } from './drawer/drawer.component';
 import {MatListModule} from "@angular/material/list";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import {MatListModule} from "@angular/material/list";
     HttpClientModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

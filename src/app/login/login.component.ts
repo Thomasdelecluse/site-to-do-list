@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {AuthDAO} from "../../dao/AuthDAO";
-import {HttpResponse} from "@angular/common/http";
 import {AuthService} from "../../service/AuthService";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-login',
@@ -12,9 +11,8 @@ import {AuthService} from "../../service/AuthService";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router , private snackbar: MatSnackBar) { }
 
-  }
 
   LoginForm = new FormGroup({
     username: new FormControl('', Validators.required),
@@ -33,7 +31,13 @@ export class LoginComponent implements OnInit {
     }
     this.authService.login(loginInfo).subscribe(
       (response) => {
-        this.router.navigate(['/home']);
+        this.snackbar.open('Connexion réussie', 'Fermer', {
+          duration: 2000,
+          verticalPosition: 'bottom',
+        });
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, 2000);
       },
       (error) => {
         this.error = error;

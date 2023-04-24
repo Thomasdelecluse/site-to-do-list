@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../service/AuthService";
 import {Router} from "@angular/router";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-register',
@@ -10,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private snackbar: MatSnackBar) { }
   hide = true;
   error: string | undefined;
   ngOnInit(): void {
@@ -29,6 +30,10 @@ export class RegisterComponent implements OnInit {
     this.authService.register(RegisterInfo).subscribe(
       (response) => {
         if(response.status === 201){
+          this.snackbar.open('Vous avez crée un compte :)', 'Fermer', {
+            duration: 3000,
+            verticalPosition: 'bottom',
+          });
           // Faire quelque chose si la requête renvoie une réponse 201
           this.router.navigate(['/login']);
         }
