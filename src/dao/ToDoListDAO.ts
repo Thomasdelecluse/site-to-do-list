@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {ToDoDTO} from "../dto/ToDoDTO";
+import {ToDoDTO} from "../dto/toDoDTO";
 import {Observable} from "rxjs";
 import {TokenService} from "../service/TokenService";
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ToDoListFormService} from "../../service/ToDoListFormService";
-import {ToDoDTO} from "../../dto/ToDoDTO";
+import {ToDoDTO} from "../../dto/toDoDTO";
 import {Router} from "@angular/router";
 import {MatTableDataSource} from "@angular/material/table";
 

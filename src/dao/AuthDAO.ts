@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {HttpClient, HttpHeaders, HttpParams, HttpResponse} from "@angular/common/http";
 import {catchError, map, Observable} from "rxjs";
-import SuccessfulLoginDTO from "../dto/successful-login.dto";
+import SuccessfulLoginDTO from "../dto/successfulLoginDTO";
 
 
 @Injectable({
