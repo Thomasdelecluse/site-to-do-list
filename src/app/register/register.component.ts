@@ -11,6 +11,7 @@ import {Router} from "@angular/router";
 export class RegisterComponent implements OnInit {
 
   constructor(private authService: AuthService, private router: Router) { }
+  hide = true;
   error: string | undefined;
   ngOnInit(): void {
   }

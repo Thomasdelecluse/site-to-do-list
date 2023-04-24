@@ -4,13 +4,16 @@
       <h2 class="title">Register Page</h2>
     </div>
     <form class="formulaire" [formGroup]="RegisterForm" (ngSubmit)="onFormSubmit()">
-      <mat-form-field class="example-full-width" >
+      <mat-form-field appearance="fill" >
         <mat-label>Login</mat-label>
         <input required minlength="4" matInput formControlName="login" placeholder="Votre nom d'utilisateur">
       </mat-form-field>
-      <mat-form-field class="example-full-width" >
+      <mat-form-field appearance="fill">
         <mat-label>Password</mat-label>
-        <input required minlength="4" matInput formControlName="password" placeholder="Votre mot de passe">
+        <input required minlength="4" matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
 <!--          alert mauvais mot de passe-->
       <div  *ngIf="error != null" class="alert alert-danger" role="alert">
