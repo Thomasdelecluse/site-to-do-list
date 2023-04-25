@@ -1,27 +1,25 @@
-# TodoList
+# ToDoListSite
+ToDoListSite est une application frontend développée avec Angular et TypeScript, qui permet aux utilisateurs de gérer leur liste de tâches à accomplir et de gérer leurs comptes d'utilisateurs.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+# Fonctionnalités :
+ - Se connecter : Les utilisateurs peuvent se connecter à leur compte.
+ - Se déconnecter : Les utilisateurs peuvent se déconnecter de leur compte.
+ - Créer un compte : Les utilisateurs peuvent créer un nouveau compte utilisateur.
+ - Supprimer un compte : Les utilisateurs peuvent supprimer leur compte utilisateur.
+ - Modifier un compte : Les utilisateurs peuvent modifier les informations de leur compte utilisateur.
+ 
+![Photo](src/assets/img/readme/readme2.jpg)
 
-## Development server
+ - Créer une To-Do : Les utilisateurs peuvent ajouter un nouveau To-Do à leur liste.
+ - Sélectionner tous les To-Do : Les utilisateurs peuvent afficher tous les To-Do de leur liste.
+ - Sélectionner les To-Do par utilisateur connecté : Les utilisateurs peuvent afficher les To-Do de leur liste correspondant à leur compte utilisateur.
+ - Modifier une To-Do : Les utilisateurs peuvent modifier une To-Do existante de leur liste.
+ - Supprimer une To-Do : Les utilisateurs peuvent supprimer une To-Do existante de leur liste.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Photo](src/assets/img/readme/readme1.jpg)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Installation :
+Cloner le repository sur votre machine.
+Assurez-vous d'avoir Angular et TypeScript installés sur votre machine.
+Exécutez la commande npm install pour installer toutes les dépendances nécessaires.
+Exécutez la commande ng serve pour lancer l'application.
