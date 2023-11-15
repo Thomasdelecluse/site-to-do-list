@@ -19,21 +19,21 @@ export class ToDoListDAO {
 // provisoire argument name
   createToDo(todo: {title: string, type: string, description: string }) {
     const headers = this.tokenService.getTokenForHeaders();
-    return this.httpClient.post('http://localhost:8088/todos', todo, {headers})
+    return this.httpClient.post('http://localhost:8080/todos', todo, {headers})
   }
 
   getAllToDo() : Observable<ToDoDTO[]> {
     const headers = this.tokenService.getTokenForHeaders();
-    return this.httpClient.get<ToDoDTO[]>('http://localhost:8088/todos', {headers})
+    return this.httpClient.get<ToDoDTO[]>('http://localhost:8080/todos', {headers})
   }
 
   putUpdateStatus(id: number, todo: Omit<ToDoDTO, "id">) {
     const headers = this.tokenService.getTokenForHeaders();
-    return this.httpClient.put('http://localhost:8088/todos/' + id, todo, {headers})
+    return this.httpClient.put('http://localhost:8080/todos/' + id, todo, {headers})
   }
 
   deleteTodo(id: number) {
     const headers = this.tokenService.getTokenForHeaders();
-    return this.httpClient.delete('http://localhost:8088/todos/' + id, {headers})
+    return this.httpClient.delete('http://localhost:8080/todos/' + id, {headers})
   }
 }

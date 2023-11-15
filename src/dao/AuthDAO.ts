@@ -13,12 +13,12 @@ export class AuthDAO {
   }
 
   login(loginInfo: { username: string, password: string }) {
-    const url = `http://localhost:8088/login`;
+    const url = `http://localhost:8080/login`;
     return this.httpClient.post<SuccessfulLoginDTO>(url, loginInfo)
   }
 
   register(registerInfo: { login: string, password: string }) {
-    const url = `http://localhost:8088/utilisateurs`;
+    const url = `http://localhost:8080/utilisateurs`;
     return this.httpClient.post<string>(url, registerInfo, {observe: 'response'})
   }
 }
